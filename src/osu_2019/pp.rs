@@ -361,7 +361,7 @@ impl<'m> OsuPP<'m> {
         // Longer maps are worth more
         let len_bonus = 0.88
             + 0.4 * (total_hits / 1600.0).min(1.0)
-            + (total_hits > 1600.0) as u8 as f32 * 0.1 * (total_hits / 1600.0).log10();
+            + (total_hits > 1600.0) as u8 as f32 * 0.5 * (total_hits / 1600.0).log10();
         speed_value *= len_bonus;
 
         // Penalize misses
